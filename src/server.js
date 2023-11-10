@@ -4,11 +4,11 @@ import initWebRoutes from "./routes/web"
 require("dotenv").config()
 
 const app = express()
+const PORT = process.env.PORT || 3005
 
 configViewEngine(app)
 initWebRoutes(app)
 
-const PORT = process.env.PORT || 3005
 app.listen(PORT, () => {
-    console.log("Server is running on port" + PORT)
+    console.log("Server is running on port " + PORT)
 })
